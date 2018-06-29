@@ -1,4 +1,4 @@
-# Net_pong_game
+# Net_pong_game Made with Unity 2017.3.1
 Started as project for University class but I still work on it in spare time.
 // = Fixed
 
