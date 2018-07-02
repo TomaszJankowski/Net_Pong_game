@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour {
 
     public GameObject player1, player2;
     Vector2 pl, pr;
-    float ranX, ranY;
+    float randomX, randomY;
 
      void Start()
     {
@@ -51,10 +51,10 @@ public class Ball : MonoBehaviour {
    
     void StartBall()
     {
-        ranX = Random.Range(0.3f, 0.8f);
-        ranY = Random.Range(0.3f, 0.8f);
+        randomX = Random.Range(0.3f, 0.8f);
+        randomY = Random.Range(0.3f, 0.8f);
 
-        Vector2 v = new Vector2(ranX, ranY) * Speed * Time.deltaTime;
+        Vector2 v = new Vector2(randomX, randomY) * Speed * Time.deltaTime;
 
         this.GetComponent<Rigidbody2D>().AddForce(v);
     }

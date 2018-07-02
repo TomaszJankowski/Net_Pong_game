@@ -6,8 +6,9 @@ public class LocalScoreRight : MonoBehaviour {
     public Text text;
     public GameObject ball;
 
-
-    private int PlayerLeft = 0;
+    [HideInInspector]
+    public int PlayerLeft = 0;
+    [HideInInspector]
     public int PlayerRight = 0;
 
 

@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PauseMenuMulti : MonoBehaviour {
+public class PauseMenuMulti : PauseMenu {
 
-    public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
 
-    void Update()
+     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -21,26 +18,16 @@ public class PauseMenuMulti : MonoBehaviour {
         }
     }
 
-
-    public void Resume()
+    public override void Resume()
     {
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
     }
 
-    void Pause()
+    public override void Pause()
     {
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
     }
 
-    public void LoadMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-    }
 }
